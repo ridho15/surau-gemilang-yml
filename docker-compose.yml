@@ -1,0 +1,14 @@
+services:
+  surau-gemilang-service:
+    image: 192.168.0.137:5000/surau-gemilang-service:1.0.0
+    container_name: surau-gemilang-service
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Jakarta
+    networks:
+      - microservice_net
+
+networks:
+  microservice_net:
+    external: true
+
